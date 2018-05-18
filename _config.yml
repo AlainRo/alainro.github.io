@@ -3,7 +3,7 @@ name: Alain Roan
 email: alain.roan@perceptible.fr
 description: Le nouveau site statique de perceptible qui reprend les plus belle réalisations et billets de blog.
 
-remote_theme: jekyll-material-theme
+theme: jekyll-material-theme
 
 parallax_image_one: assets/images/startup3.jpg # These are the images used for the parallax background
 parallax_image_two: assets/images/startup3.jpg
