@@ -4,9 +4,10 @@ email: alain.roan@perceptible.fr
 description: Le nouveau site statique de perceptible qui reprend les plus belle réalisations et billets de blog.
 
 remote_theme: jameshamann/jekyll-material-theme
+theme: jekyll-material-theme
 
-parallax_image_one: assets/images/startup3.jpg # These are the images used for the parallax background
-parallax_image_two: assets/images/startup3.jpg
+parallax_image_one: images/smallcompass5.jpg # These are the images used for the parallax background
+parallax_image_two: images/bigdata2.png
 
 # Settings for the porfolio section
 
@@ -38,29 +39,7 @@ project_four_icon: restaurant
 # Skill icons from https://konpa.github.io/devicon/
 
 skills:
-  - name: bootstrap
-  - name: chrome
-  - name: d3js
 
-  - name: git
-  - name: github
-  - name: heroku
-  - name: html5
-  - name: ie10
-  - name: illustrator
-  - name: inkscape
-
-  - name: javascript
-  - name: meteor
-  - name: mongodb
-  - name: mysql
-  - name: nginx
-  - name: nodejs
-  - name: python
-  - name: trello
-  - name: twitter
-
-  - name: vuejs
 
 
 icon_size: 50 # font-size of icons in px
