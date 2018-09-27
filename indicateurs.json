@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Revenu",
+		"subtitle": "en €",
+		"rangebad": 150,
+		"rangeok": 225,
+		"rangegood": 300,
+		"measures": 270
+	},
+	{
+		"title": "Profit",
+		"subtitle": "%",
+		"rangebad": 20,
+		"rangeok": 25,
+		"rangegood": 30,
+		"measures": 23
+	},
+	{
+		"title": "Order Size",
+		"subtitle": "US$, average",
+		"rangebad": 350,
+		"rangeok": 500,
+		"rangegood": 600,
+		"measures": 320
+	},
+	{
+		"title": "New Customers",
+		"subtitle": "count",
+		"rangebad": 1400,
+		"rangeok": 2000,
+		"rangegood": 2500,
+		"measures": 1650
+	},
+	{
+		"title": "Satisfaction",
+		"subtitle": "out of 5",
+		"rangebad": 3.5,
+		"rangeok": 4.25,
+		"rangegood": 5,
+		"measures": 4.7
+	}
+]

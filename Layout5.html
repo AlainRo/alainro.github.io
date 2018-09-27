@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Layout5</title>
+        <link type="text/css" rel="stylesheet" href="appbase.css">
+        <link type="text/css" rel="stylesheet" href="wikistyle.css">
+<script src="http://perceptible.fr/files/protovis-r32.js" type="text/javascript"> </script>
+    </head>
+    <body class="wikidpad">
+<span class="wikidpad parent-nodes">parent nodes: <span class="wikidpad parent-node"><a href="Collection.html" class="wikidpad">Collection</a></span><br class="wikidpad" /><br class="wikidpad" /></span>
+<a name=".h0"></a><h2 class="heading-level2">Layout5</h2>
+ <a name=".h12"></a><h2 class="heading-level2">Layout4</h2>
+ <script type="text/javascript+protovis">
+
+var data =[
+["Chiffre d'affaire", "red", [
+  40, 115, 100, 80, 60, 40, 23, 10, 10, 25, 75, 145,
+  130, 130, 80, 65, 20, 10, 5, 10, 60, 190, 180, 175,
+  120, 50, 35, 20, 10, 15, 30, 60, 105, 105, 105, 80, 65
+]],
+["Dépenses", "green",[
+  40, 115, 100, 80, 60, 40, 23, 10, 10, 25, 75, 145,
+  130, 130, 80, 65, 20, 10, 5, 10, 60, 190, 180, 175,
+  120, 50, 35, 20, 10, 15, 30, 60, 105, 105, 105, 80, 65
+]
+]
+];
+
+
+var datat = pv.transpose(data);
+console.log(datat);
+
+
+var data1 = datat[0];
+var legend = new pv.Panel()
+	.width(130)
+	.height(function () data1.length * 20);
+legend.add(pv.Label)
+	.data(data1)
+	.left(0)
+	.top(function () this.index * 20 + 20)
+	.textAlign("left")
+	.textStyle("black")
+    .font(function() 15 + "px sans-serif")
+    .text(function (d) d);    
+legend.render();
+
+var data2 = datat[1];
+var point = new pv.Panel()
+	.width(20)
+	.height(function () data2.length * 20);
+point.add(pv.Dot)
+	.data(data2)
+	.top(function () this.index * 20 + 10)
+   	.strokeStyle(null)
+ 	.left(function () this.parent.width()/2 )
+	.fillStyle(function (d) d)
+	.radius(10);
+point.render();
+
+
+var data3 = datat[2]
+;
+console.log("data3:",JSON.stringify(data3))
+
+
+
+var spark = new pv.Panel()
+      .width(200)
+	  .height(function () data3.length * 20);
+
+var Spanel = spark.add(pv.Panel)
+	.data(data3)
+	.top(function ()  20*this.index)
+    
+  .add(pv.Line)
+      .data(function (d) d)
+	  .def("n", function () data3[this.parent.index].length)
+	  .def("max", function ()pv.max(data3[this.parent.index]))
+      .left(function()30+this.index * 200/this.n())
+      .top(function (d)  d *20 /this.max())
+      .strokeStyle("#000")
+      .lineWidth(1);
+    
+Spanel.add(pv.Label)
+		.data(function (d) d)
+		.left(0)
+		.top(20)
+		.textAlign("left")
+		.textStyle("black")
+		.font(function() 15 + "px sans-serif")
+		.visible(function () this.index == 0)
+		.text(function (d) d)
+
+
+  spark.render();
+
+
+
+</script>    </body>
+</html>
