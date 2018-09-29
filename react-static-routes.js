@@ -1,12 +1,10 @@
 
-
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-
-import universal, { setHasBabelPlugin } from 'react-universal-component'
-
 import { cleanPath } from 'react-static'
 
+import universal, { setHasBabelPlugin } from 'react-universal-component'
+  
 
 
 setHasBabelPlugin()
@@ -19,11 +17,12 @@ const universalOptions = {
   },
 }
 
-  const t_0 = universal(import('../src/containers/Home'), universalOptions)
-const t_1 = universal(import('../src/containers/About'), universalOptions)
-const t_2 = universal(import('../src/containers/Post'), universalOptions)
-const t_3 = universal(import('../src/containers/Blog'), universalOptions)
-const t_4 = universal(import('../src/containers/404'), universalOptions)
+const t_0 = universal(import('../src/pages/404.js'), universalOptions)
+const t_1 = universal(import('../src/pages/about.js'), universalOptions)
+const t_2 = universal(import('../src/pages/blog.js'), universalOptions)
+const t_3 = universal(import('../src/containers/Post'), universalOptions)
+const t_4 = universal(import('../src/pages/index.js'), universalOptions)
+const t_5 = universal(import('../src/pages/Story.js'), universalOptions)
 
 
 // Template Map
@@ -32,13 +31,16 @@ global.componentsByTemplateID = global.componentsByTemplateID || [
 t_1,
 t_2,
 t_3,
-t_4
+t_4,
+t_5
 ]
 
-// Template Tree
-global.templateIDsByPath = global.templateIDsByPath || {
-  '404': 4
+const defaultTemplateIDs = {
+  '404': 0
 }
+
+// Template Tree
+global.templateIDsByPath = global.templateIDsByPath || defaultTemplateIDs
 
 // Get template for given path
 const getComponentForPath = path => {
@@ -50,8 +52,18 @@ global.reactStaticGetComponentForPath = getComponentForPath
 global.reactStaticRegisterTemplateIDForPath = (path, id) => {
   global.templateIDsByPath[path] = id
 }
+global.clearTemplateIDs = () => {
+  global.templateIDsByPath = defaultTemplateIDs
+}
 
 export default class Routes extends Component {
+  componentDidMount () {
+    global.clearTemplateIDs = () => {
+      this.setState({})
+    }
+    
+
+  }
   render () {
     const { component: Comp, render, children } = this.props
 
@@ -60,9 +72,9 @@ export default class Routes extends Component {
       let is404 = path === '404'
       if (!Comp) {
         is404 = true
-        Comp = getComponentForPath('404')
+        Comp = getComponentForPath('/404')
       }
-      return newProps => (
+      return (newProps = {}) => (
         Comp
           ? <Comp {...newProps} {...(is404 ? {is404: true} : {})} />
           : null
@@ -89,12 +101,12 @@ export default class Routes extends Component {
 
     // This is the default auto-routing renderer
     return (
-      <Route path='*' render={props => {
+      <Route render={props => {
         let Comp = getFullComponentForPath(props.location.pathname)
         // If Comp is used as a component here, it triggers React to re-mount the entire
         // component tree underneath during reconciliation, losing all internal state.
         // By unwrapping it here we keep the real, static component exposed directly to React.
-        return Comp && Comp({ ...props, key: props.location.pathname })
+        return Comp && Comp()
       }} />
     )
   }

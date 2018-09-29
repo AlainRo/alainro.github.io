@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en-US"><head><link rel="preload" as="script" href="/templates/src-containers-Post.fcb1b216.js"/><link rel="preload" as="script" href="/templates/styles.9a61051d.js"/><link rel="preload" as="script" href="/templates/vendors~main.a44c5c78.js"/><link rel="preload" as="script" href="/main.c8404c51.js"/><link rel="preload" as="style" href="/styles.9a61051d.css"/><link rel="stylesheet" href="/styles.9a61051d.css"/><meta charSet="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/></head><body><div id="root"><div data-reactroot=""><nav><a href="/">Accueil</a><a href="/about">Pour quoi faire ?</a><a class="active" aria-current="page" href="/blog">Blog</a><a href="/qui">Qui</a></nav><div class="content"><div><a class="active" aria-current="page" href="/blog/">&lt;<!-- --> Back</a><br/><h1 id="voir-la-s-curit-">Voir la sécurité</h1>
+<center><img src="/files/Titresecu.png" alt=""/></center>
+
+<h3 id="deux-chelles-de-temps">Deux échelles de temps</h3>
+<p>La sécurité a deux dimensions temporelles: </p>
+<ul>
+<li>l&#x27;année, le semestre, le trimestre: <strong>la planification</strong> réalisée pour mettre en place <em>la stratégie de sécurité</em> (les mesures concrètes à appliquer, les moyens à utiliser) déduite de l&#x27;analyse des risques (ce qu&#x27;il faut protéger, contre quoi, à quel prix)</li>
+<li>le temps réel, la journée, la semaine: <strong>la veille en continue</strong> qui permet de: <ol>
+<li>vérifier que les mesures décidées sont correctement mises en œuvre</li>
+<li>piloter l&#x27;exécution des <em>contre-mesures</em> appropriées pour parer les attaques d&#x27;une part et pour colmater les failles qui apparaissent d&#x27;autre part</li>
+</ol>
+</li>
+</ul>
+<h3 id="la-veille">La veille</h3>
+<p>Intéressons nous aux vulnérabilités. Techniquement la surveillance est assurée par un scanner qui teste de manière périodique chaque machine du réseau vis à vis d&#x27;une liste de vulnérabilités connues: applications installées sans les derniers correctifs de sécurité, ports ouverts sans raison, mot de passe par défaut, ...
+La question périodique est: </p>
+<blockquote>
+<blockquote>
+<p><strong>A t-on détecté des vulnérabilités dangereuses ?</strong> </p>
+</blockquote>
+</blockquote>
+<ul>
+<li>Oui -&gt; enclencher au plus vite une correction adéquate. </li>
+<li>Non -&gt; passer à autre chose...<ul>
+<li>« Non ?...»  </li>
+<li>« Non, ...enfin, pas depuis la dernière fois que l&#x27;on a vérifié... »</li>
+</ul>
+</li>
+</ul>
+<p>Et là bien sûr, une foule d&#x27;autres questions et ... de jurons surgissent...
+Le plus souvent une donnée n&#x27;est pas connue à tout instant mais fait l&#x27;objet d&#x27;une <em>ronde</em> régulière. Et il arrive que des machines ne soient pas accessibles ou éteintes au moment de l&#x27;essai de vérification. Le dispositif de surveillance peut aussi être en panne. En pratique, il faut savoir se contenter de la <em>dernière valeur observée</em> et de l&#x27;<em>âge de l&#x27;observation</em>. Cet âge devient une donnée à part entière utile pour 1) juger de la fraicheur de l&#x27;information et 2) déclencher lui même des alarmes.</p>
+<h3 id="echelle-des-alarmes">Echelle des alarmes</h3>
+<p>Les deux dimensions (intensité et âge/confiance) se combinent sur une échelle unique de gravité progressive. Que la dernière vérification d&#x27;une machine date de 15 jours est fâcheux (orange), mais il est certainement plus grave de constater qu&#x27;une correction de vulnérabilité n&#x27;est toujours pas effectuée après le délai prévu (noir).</p>
+<center>
+    <img src="/files/eche23.png" alt=""/>
+</center> 
+
+<p>Les niveaux sont précisément définis par les seuils de vulnérabilité et les délais de réaction que fixe la politique de sécurité.</p>
+<h3 id="l-alarme-et-son-contexte">L&#x27;alarme et son contexte</h3>
+<p>Une alarme attire l&#x27;attention et invite à la décision rapide, elle doit donc aussi fournir suffisamment de contexte pour prendre la <em>bonne</em> décision. 
+En complément de l&#x27;alarme figurée par son code couleur, l&#x27;historique permet de répondre aux questions sur son évolution récente: </p>
+<ul>
+<li>« depuis combien de temps cette alarme est elle enclenchée ? »</li>
+<li>« la situation est elle en train de s&#x27;améliorer ou d&#x27;empirer ? »</li>
+<li>...</li>
+</ul>
+<p>Disposer les machines les unes sous les autres permet de distinguer des schémas se produisant simultanément sur plusieurs machines:</p>
+<ul>
+<li>« est ce un cas isolé, ou la manifestation  d&#x27;un phénomène plus large  ? »</li>
+<li>...<center><img src="/files/Indic2.png" alt=""/></center>
+
+</li>
+</ul>
+<p><strong>Comment lire l&#x27;indicateur:</strong></p>
+<ul>
+<li>la première colonne synthétise l&#x27;état de l&#x27;indicateur à la date du jour (15/5) pour chaque machine</li>
+<li>deux machines ont des vulnérabilités non tolérables, et pour celle en noir, il y a du retard de correction</li>
+<li>l&#x27;historique dans la partie droite synthétise l&#x27;évolution sur les 4 dernières semaines</li>
+<li>les quatre barres noires successives à droite de la <em>Bureautique comptabilité Lyon</em> indique qu&#x27;une correction aurait due être effectuée il y a déjà quatre jours</li>
+<li>le schéma <img src="/files/ind.png" alt=""/> est la signature que la vérification n&#x27;a pas pu s&#x27;effectuer correctement pendant plusieurs jours consécutifs, on passe de blanc à gris, puis à orange après 3 jours. Le fait que le schéma se répète sur plusieurs lignes à la même date indique qu&#x27;il s&#x27;agit probablement d&#x27;un problème technique du côté du dispositif de scan.</li>
+</ul>
+<h2 id="l-il-d-code-sans-effort-la-situation">L&#x27;œil décode sans effort la situation</h2>
+<p>Les bénéfices de la visualisation sont:</p>
+<ul>
+<li>ne sont présentées que les informations qui sollicitent une réaction. Si tout va bien, tout est blanc.  </li>
+<li>le code couleur (gris, orange, rouge, noir), en redondance avec la taille des barres induisent un sens de la <strong>gravité</strong> évident même en l&#x27;absence de la légende exacte</li>
+<li>les contextes temporel (évolution récente) et de voisinage (les autres machines) fournissent une grille de décodage très riche</li>
+</ul>
+<p>Le responsable (y compris non technique) peut sans effort obtenir des réponses aux deux questions importantes concernant les vulnérabilités:</p>
+<ul>
+<li>Surveille t-on suffisamment les vulnérabilités du parc de machine ?</li>
+<li>Corrige t-on en temps utile les vulnérabilités détectées ?</li>
+</ul>
+<p>ainsi que les preuves factuelles de ces réponses.</p></div></div></div></div><script type="text/javascript">
+    window.__routeInfo = {"path":"blog/indicateur-sécurité","templateID":3,"sharedPropsHashes":{},"localProps":null,"allProps":{"post":{"title":"Visualiser la sécurité","slug":"indicateur-sécurité","contents":"<h1 id=\"voir-la-s-curit-\">Voir la sécurité</h1>\n<center><img src=\"/files/Titresecu.png\" alt=\"\"></center>\n\n<h3 id=\"deux-chelles-de-temps\">Deux échelles de temps</h3>\n<p>La sécurité a deux dimensions temporelles: </p>\n<ul>\n<li>l&#39;année, le semestre, le trimestre: <strong>la planification</strong> réalisée pour mettre en place <em>la stratégie de sécurité</em> (les mesures concrètes à appliquer, les moyens à utiliser) déduite de l&#39;analyse des risques (ce qu&#39;il faut protéger, contre quoi, à quel prix)</li>\n<li>le temps réel, la journée, la semaine: <strong>la veille en continue</strong> qui permet de: <ol>\n<li>vérifier que les mesures décidées sont correctement mises en &oelig;uvre</li>\n<li>piloter l&#39;exécution des <em>contre-mesures</em> appropriées pour parer les attaques d&#39;une part et pour colmater les failles qui apparaissent d&#39;autre part</li>\n</ol>\n</li>\n</ul>\n<h3 id=\"la-veille\">La veille</h3>\n<p>Intéressons nous aux vulnérabilités. Techniquement la surveillance est assurée par un scanner qui teste de manière périodique chaque machine du réseau vis à vis d&#39;une liste de vulnérabilités connues: applications installées sans les derniers correctifs de sécurité, ports ouverts sans raison, mot de passe par défaut, ...\nLa question périodique est: </p>\n<blockquote>\n<blockquote>\n<p><strong>A t-on détecté des vulnérabilités dangereuses ?</strong> </p>\n</blockquote>\n</blockquote>\n<ul>\n<li>Oui -&gt; enclencher au plus vite une correction adéquate. </li>\n<li>Non -&gt; passer à autre chose...<ul>\n<li>« Non ?...»  </li>\n<li>« Non, ...enfin, pas depuis la dernière fois que l&#39;on a vérifié... »</li>\n</ul>\n</li>\n</ul>\n<p>Et là bien sûr, une foule d&#39;autres questions et ... de jurons surgissent...\nLe plus souvent une donnée n&#39;est pas connue à tout instant mais fait l&#39;objet d&#39;une <em>ronde</em> régulière. Et il arrive que des machines ne soient pas accessibles ou éteintes au moment de l&#39;essai de vérification. Le dispositif de surveillance peut aussi être en panne. En pratique, il faut savoir se contenter de la <em>dernière valeur observée</em> et de l&#39;<em>âge de l&#39;observation</em>. Cet âge devient une donnée à part entière utile pour 1) juger de la fraicheur de l&#39;information et 2) déclencher lui même des alarmes.</p>\n<h3 id=\"echelle-des-alarmes\">Echelle des alarmes</h3>\n<p>Les deux dimensions (intensité et âge/confiance) se combinent sur une échelle unique de gravité progressive. Que la dernière vérification d&#39;une machine date de 15 jours est fâcheux (orange), mais il est certainement plus grave de constater qu&#39;une correction de vulnérabilité n&#39;est toujours pas effectuée après le délai prévu (noir).</p>\n<center>\n    <img src=\"/files/eche23.png\" alt=\"\">\n</center> \n\n<p>Les niveaux sont précisément définis par les seuils de vulnérabilité et les délais de réaction que fixe la politique de sécurité.</p>\n<h3 id=\"l-alarme-et-son-contexte\">L&#39;alarme et son contexte</h3>\n<p>Une alarme attire l&#39;attention et invite à la décision rapide, elle doit donc aussi fournir suffisamment de contexte pour prendre la <em>bonne</em> décision. \nEn complément de l&#39;alarme figurée par son code couleur, l&#39;historique permet de répondre aux questions sur son évolution récente: </p>\n<ul>\n<li>« depuis combien de temps cette alarme est elle enclenchée ? »</li>\n<li>« la situation est elle en train de s&#39;améliorer ou d&#39;empirer ? »</li>\n<li>...</li>\n</ul>\n<p>Disposer les machines les unes sous les autres permet de distinguer des schémas se produisant simultanément sur plusieurs machines:</p>\n<ul>\n<li>« est ce un cas isolé, ou la manifestation  d&#39;un phénomène plus large  ? »</li>\n<li>...<center><img src=\"/files/Indic2.png\" alt=\"\"></center>\n\n</li>\n</ul>\n<p><strong>Comment lire l&#39;indicateur:</strong></p>\n<ul>\n<li>la première colonne synthétise l&#39;état de l&#39;indicateur à la date du jour (15/5) pour chaque machine</li>\n<li>deux machines ont des vulnérabilités non tolérables, et pour celle en noir, il y a du retard de correction</li>\n<li>l&#39;historique dans la partie droite synthétise l&#39;évolution sur les 4 dernières semaines</li>\n<li>les quatre barres noires successives à droite de la <em>Bureautique comptabilité Lyon</em> indique qu&#39;une correction aurait due être effectuée il y a déjà quatre jours</li>\n<li>le schéma <img src=\"/files/ind.png\" alt=\"\"> est la signature que la vérification n&#39;a pas pu s&#39;effectuer correctement pendant plusieurs jours consécutifs, on passe de blanc à gris, puis à orange après 3 jours. Le fait que le schéma se répète sur plusieurs lignes à la même date indique qu&#39;il s&#39;agit probablement d&#39;un problème technique du côté du dispositif de scan.</li>\n</ul>\n<h2 id=\"l-il-d-code-sans-effort-la-situation\">L&#39;&oelig;il décode sans effort la situation</h2>\n<p>Les bénéfices de la visualisation sont:</p>\n<ul>\n<li>ne sont présentées que les informations qui sollicitent une réaction. Si tout va bien, tout est blanc.  </li>\n<li>le code couleur (gris, orange, rouge, noir), en redondance avec la taille des barres induisent un sens de la <strong>gravité</strong> évident même en l&#39;absence de la légende exacte</li>\n<li>les contextes temporel (évolution récente) et de voisinage (les autres machines) fournissent une grille de décodage très riche</li>\n</ul>\n<p>Le responsable (y compris non technique) peut sans effort obtenir des réponses aux deux questions importantes concernant les vulnérabilités:</p>\n<ul>\n<li>Surveille t-on suffisamment les vulnérabilités du parc de machine ?</li>\n<li>Corrige t-on en temps utile les vulnérabilités détectées ?</li>\n</ul>\n<p>ainsi que les preuves factuelles de ces réponses.</p>\n"}},"siteData":{"title":"React Static"}};</script><script defer="" type="text/javascript" src="/templates/src-containers-Post.fcb1b216.js"></script><script defer="" type="text/javascript" src="/templates/styles.9a61051d.js"></script><script defer="" type="text/javascript" src="/templates/vendors~main.a44c5c78.js"></script><script defer="" type="text/javascript" src="/main.c8404c51.js"></script></body></html>
