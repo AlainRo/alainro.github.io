@@ -22,7 +22,7 @@ const t_1 = universal(import('../src/pages/about.js'), universalOptions)
 const t_2 = universal(import('../src/pages/blog.js'), universalOptions)
 const t_3 = universal(import('../src/containers/Post'), universalOptions)
 const t_4 = universal(import('../src/pages/index.js'), universalOptions)
-const t_5 = universal(import('../src/pages/Story.js'), universalOptions)
+const t_5 = universal(import('../src/pages/qui.js'), universalOptions)
 
 
 // Template Map
