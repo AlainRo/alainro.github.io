@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{117:function(e,t,l){"use strict";l.r(t);var n=l(1),a=l.n(n),u=l(21);t.default=Object(u.withRouteData)(function(e){var t=e.posts;return a.a.createElement("div",null,a.a.createElement("h1",null,"Blog"),a.a.createElement("br",null),"Tous les billets:",a.a.createElement("ul",null,t&&t.map(function(e){return e.slug&&a.a.createElement("li",{key:e.slug},a.a.createElement(u.Link,{to:"/blog/".concat(e.slug,"/")},e.title))})))})}}]);
+//# sourceMappingURL=src-pages-blog.63f0b0fe.js.map
