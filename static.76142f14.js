@@ -1457,7 +1457,7 @@ function () {
             break;
 
           case 19:
-            routeInfoRoot = ( false ? undefined : "https://perceptible.fr/") || '/';
+            routeInfoRoot = ( false ? undefined : "https://alainro.github.io/") || '/';
             cacheBuster = process.env.REACT_STATIC_CACHE_BUST ? "?".concat(process.env.REACT_STATIC_CACHE_BUST) : '';
             getPath = "".concat(routeInfoRoot).concat((0, _shared.pathJoin)(path, 'routeInfo.json')).concat(cacheBuster);
 
@@ -6041,7 +6041,7 @@ function (_React$Component) {
         var resolvedTo = _typeof(to) === 'object' ? to.pathname : to;
 
         if (!resolvedTo.includes('//')) {
-          resolvedTo = "".concat("https://perceptible.fr/").concat(resolvedTo === '/' ? '' : resolvedTo);
+          resolvedTo = "".concat("https://alainro.github.io/").concat(resolvedTo === '/' ? '' : resolvedTo);
         }
 
         return (// ReactRouterRedirect
@@ -6057,7 +6057,7 @@ function (_React$Component) {
               lineNumber: 20
             },
             __self: this
-          }, "".concat("https://perceptible.fr/").concat(fromPath === '/' ? '' : fromPath)), _react.default.createElement("link", {
+          }, "".concat("https://alainro.github.io/").concat(fromPath === '/' ? '' : fromPath)), _react.default.createElement("link", {
             rel: "canonical",
             href: resolvedTo,
             __source: {
@@ -6863,4 +6863,4 @@ if(false){}}
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.dfaaf186.js.map
+//# sourceMappingURL=static.76142f14.js.map
