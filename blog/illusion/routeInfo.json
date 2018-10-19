@@ -1,1 +1,0 @@
-{"path":"blog/illusion","templateID":3,"sharedPropsHashes":{},"localProps":{"post":{"title":"Illusion","slug":"illusion","render":"jsx","contents":"<h1 id=\"un-titre\">Un titre</h1>\n<p>Un texte avant</p>\n<p><Observable /></p>\n<Illusion />\n\n\n\n<p>Un texte après</p>\n"}}}
