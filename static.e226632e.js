@@ -110,7 +110,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 51);
+/******/ 	return __webpack_require__(__webpack_require__.s = 52);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -257,9 +257,9 @@ exports.onLoading = exports.withLoading = exports.Loading = void 0;
 
 var _utils = __webpack_require__(13);
 
-var _reactHelmet = __webpack_require__(62);
+var _reactHelmet = __webpack_require__(63);
 
-var _browser = __webpack_require__(16);
+var _browser = __webpack_require__(15);
 
 Object.keys(_browser).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -274,15 +274,15 @@ Object.keys(_browser).forEach(function (key) {
 
 var _scrollTo = _interopRequireDefault(__webpack_require__(36));
 
-var _RouteData = _interopRequireWildcard(__webpack_require__(63));
+var _RouteData = _interopRequireWildcard(__webpack_require__(64));
 
-var _SiteData = _interopRequireWildcard(__webpack_require__(64));
+var _SiteData = _interopRequireWildcard(__webpack_require__(65));
 
-var _Prefetch = _interopRequireDefault(__webpack_require__(65));
+var _Prefetch = _interopRequireDefault(__webpack_require__(66));
 
-var _Routes = _interopRequireDefault(__webpack_require__(66));
+var _Routes = _interopRequireDefault(__webpack_require__(67));
 
-var _Root = _interopRequireDefault(__webpack_require__(67));
+var _Root = _interopRequireDefault(__webpack_require__(68));
 
 function _interopRequireWildcard(obj) {
   if (obj && obj.__esModule) {
@@ -439,7 +439,7 @@ var _createClass = function () {
   };
 }();
 
-var _requireUniversalModule = __webpack_require__(53);
+var _requireUniversalModule = __webpack_require__(54);
 
 Object.defineProperty(exports, 'CHUNK_NAMES', {
   enumerable: true,
@@ -454,7 +454,7 @@ Object.defineProperty(exports, 'MODULE_IDS', {
   }
 });
 
-var _reportChunks = __webpack_require__(55);
+var _reportChunks = __webpack_require__(56);
 
 Object.defineProperty(exports, 'ReportChunks', {
   enumerable: true,
@@ -471,7 +471,7 @@ var _propTypes = __webpack_require__(24);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(56);
+var _hoistNonReactStatics = __webpack_require__(57);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -888,9 +888,9 @@ Object.defineProperty(exports, "createPool", {
 });
 exports.cleanSlashes = exports.trimDoubleSlashes = exports.trimTrailingSlashes = exports.trimLeadingSlashes = exports.cutPathToRoot = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(17));
+var _regenerator = _interopRequireDefault(__webpack_require__(16));
 
-var _swimmer = __webpack_require__(57);
+var _swimmer = __webpack_require__(58);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -1374,16 +1374,10 @@ function getBasePath() {
 /* 14 */
 /***/ (function(module, exports) {
 
-module.exports = require("htmr");
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
 module.exports = require("@material-ui/core/CardContent");
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1401,13 +1395,13 @@ exports.prefetch = prefetch;
 exports.getCurrentRoutePath = getCurrentRoutePath;
 exports.templateErrorByPath = exports.templatesByPath = exports.registerTemplates = exports.templateUpdated = exports.templates = exports.plugins = exports.propsByHash = exports.routeErrorByPath = exports.routeInfoByPath = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(17));
+var _regenerator = _interopRequireDefault(__webpack_require__(16));
 
 var _axios = _interopRequireDefault(__webpack_require__(34));
 
 var _utils = __webpack_require__(13);
 
-var _Mutation = _interopRequireDefault(__webpack_require__(58));
+var _Mutation = _interopRequireDefault(__webpack_require__(59));
 
 var _Visibility = _interopRequireDefault(__webpack_require__(35));
 
@@ -2130,10 +2124,16 @@ function getCurrentRoutePath() {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports = require("htmr");
 
 /***/ }),
 /* 18 */
@@ -2156,7 +2156,7 @@ var _utils = __webpack_require__(27);
 
 var requireById = function requireById(id) {
   if (!(0, _utils.isWebpack)() && typeof id === 'string') {
-    return __webpack_require__(54)('' + id);
+    return __webpack_require__(55)('' + id);
   }
 
   return __webpack_require__('' + id);
@@ -2629,7 +2629,7 @@ exports.default = onVisible;
 
 if (typeof document !== 'undefined') {
   // Polyfill that shiz!
-  __webpack_require__(60); // Do manual polling for intersections every second. This isn't very fast
+  __webpack_require__(61); // Do manual polling for intersections every second. This isn't very fast
   // but should handle most edge cases for now
 
 
@@ -2935,7 +2935,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_static__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var htmr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var htmr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17);
 /* harmony import */ var htmr__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(htmr__WEBPACK_IMPORTED_MODULE_2__);
 //
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_static__WEBPACK_IMPORTED_MODULE_1__["withRouteData"])(function(_ref){var about=_ref.about;return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",null,about?htmr__WEBPACK_IMPORTED_MODULE_2___default()(about.contents):'');}));
@@ -2967,7 +2967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_static__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var htmr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var htmr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17);
 /* harmony import */ var htmr__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(htmr__WEBPACK_IMPORTED_MODULE_2__);
 //
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_static__WEBPACK_IMPORTED_MODULE_1__["withRouteData"])(function(_ref){var qui=_ref.qui;return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",null,qui?htmr__WEBPACK_IMPORTED_MODULE_2___default()(qui.contents):'');}));
@@ -2995,6 +2995,10 @@ var styles_ = __webpack_require__(10);
 // EXTERNAL MODULE: external "@material-ui/core"
 var core_ = __webpack_require__(5);
 
+// EXTERNAL MODULE: external "@material-ui/core/Typography"
+var Typography_ = __webpack_require__(4);
+var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_);
+
 // EXTERNAL MODULE: external "@reach/router"
 var router_ = __webpack_require__(6);
 
@@ -3011,7 +3015,7 @@ var CardActions_ = __webpack_require__(21);
 var CardActions_default = /*#__PURE__*/__webpack_require__.n(CardActions_);
 
 // EXTERNAL MODULE: external "@material-ui/core/CardContent"
-var CardContent_ = __webpack_require__(15);
+var CardContent_ = __webpack_require__(14);
 var CardContent_default = /*#__PURE__*/__webpack_require__.n(CardContent_);
 
 // EXTERNAL MODULE: external "@material-ui/core/CardMedia"
@@ -3022,43 +3026,36 @@ var CardMedia_default = /*#__PURE__*/__webpack_require__.n(CardMedia_);
 var Button_ = __webpack_require__(22);
 var Button_default = /*#__PURE__*/__webpack_require__.n(Button_);
 
-// EXTERNAL MODULE: external "@material-ui/core/Typography"
-var Typography_ = __webpack_require__(4);
-var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_);
-
 // CONCATENATED MODULE: /Users/alain/Documents/Git/perceptibleNew/src/containers/Story.js
 function _objectWithoutProperties(source,excluded){if(source==null)return{};var target=_objectWithoutPropertiesLoose(source,excluded);var key,i;if(Object.getOwnPropertySymbols){var sourceSymbolKeys=Object.getOwnPropertySymbols(source);for(i=0;i<sourceSymbolKeys.length;i++){key=sourceSymbolKeys[i];if(excluded.indexOf(key)>=0)continue;if(!Object.prototype.propertyIsEnumerable.call(source,key))continue;target[key]=source[key];}}return target;}function _objectWithoutPropertiesLoose(source,excluded){if(source==null)return{};var target={};var sourceKeys=Object.keys(source);var key,i;for(i=0;i<sourceKeys.length;i++){key=sourceKeys[i];if(excluded.indexOf(key)>=0)continue;target[key]=source[key];}return target;}//import {Link} from 'react-static'
 var Story_Story=function Story(_ref){var classes=_ref.classes,props=_objectWithoutProperties(_ref,["classes"]);return external_react_default.a.createElement(core_["Grid"],{item:true,xs:12,sm:6,md:4,lg:3},external_react_default.a.createElement(Card_default.a,{className:classes.root},external_react_default.a.createElement(CardActionArea_default.a,{component:router_["Link"],to:"/blog/".concat(props.slug,"/")},external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{gutterBottom:true,variant:"h5",className:classes.text,component:"h1"},props.title)),external_react_default.a.createElement(CardMedia_default.a,{component:"img",className:classes.media,height:"auto",image:props.img,title:props.title}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},props.text)))));};var styles=function styles(theme){return{root:{backgroundColor:'white'},text:{color:'#A8020B',fontWeight:'bold'}};};var StoryStyled=Object(styles_["withStyles"])(styles)(Story_Story);/* harmony default export */ var containers_Story = (StoryStyled);
 // CONCATENATED MODULE: /Users/alain/Documents/Git/perceptibleNew/src/containers/GridofStories.js
-var GridofStories_styles=function styles(theme){return{root:{flexGrow:1}};};function FullWidthGrid(props){var classes=props.classes;return external_react_default.a.createElement(external_react_["Fragment"],null,external_react_default.a.createElement(core_["CssBaseline"],null),external_react_default.a.createElement("div",{className:classes.root},external_react_default.a.createElement(core_["Grid"],{container:true,spacing:24}," ",external_react_default.a.createElement(containers_Story,{className:classes,title:"Pr\xE9senter \xE0 chacun ce qui est important pour lui",slug:"carte",text:"Visualiser sur une carte beaucoup d'information tout en restant clair. C'est possible \xE0 condition de prendre en compte ce qui est important pour chaque cat\xE9gorie d'utilisateur.",img:"/files/chantiers.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,slug:"bigdata2",title:"Poser simplement des questions complexes",text:"Interaction et animation pour des tableaux de bord qui permettent de formuler facilement des questions tr\xE8s sophistiqu\xE9es: montrer moi l'\xE9volution des envois dans ce cr\xE9neau de dates, cette plage horaire, un mardi ou mercredi ?",img:"/files/SMS.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Les assiettes volantes ou l'art de maintenir tout en \xE9quilibre",slug:"assiettes",text:"Faut il seulement guetter les assiettes qui vont tomber et subir la situation ? Ou bien comprendre ce qui se passe ?",img:"/files/BluePlasticPlates-m.jpg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Visualiser la s\xE9curit\xE9",slug:"indicateur-s\xE9curit\xE9",text:"Un scanner automatique de vuln\xE9rabilit\xE9 permet de tester la pr\xE9sence de failles dans les syst\xE8mes, applications et configurations des \xE9quipements d'un r\xE9seau. Ces failles \xE9tant connues de tous, elles sont autant de portes mal ferm\xE9es dangereuses pour la s\xE9curit\xE9. Mais il est vital d'optimiser ses efforts et co\xFBts de correction en prot\xE9geant le plus important, le plus vuln\xE9rable et le plus expos\xE9 d'abord.",img:"/files/Indic2.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Indicateurs visuels d'avancement de projets",slug:"indicateurs-projets",text:"Communiquer vite et bien la progression de projets.",img:"/files/syst.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Pr\xE9sentation structur\xE9e de Tables",slug:"table",text:"Une extension Excel permet de manipuler et de pr\xE9senter les tables de donn\xE9es. Les champs r\xE9p\xE9t\xE9s sont visuellement mis en facteur.",img:"/files/2014-04-14-19_33_41.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Les feux tricolores restent sur la route !",slug:"stop-aux-feux-tricolores",text:"Les Tableaux de Bord sont peupl\xE9s d'innombrables indicateurs vert/orange/rouge. Est ce vraiment une bonne id\xE9e ?",img:"/files/feutrs.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tableau de courbes",slug:"tableaudecourbes",text:"Plut\xF4t que des tableaux de chiffres avec 2 d\xE9cimales apr\xE8s la virgule, le tableau de courbes raconte une histoire et fait se poser les bonnes questions.",img:"/files/Tableau%20Courbes.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"HTML 5: l'ubiquit\xE9",slug:"html5",text:"HTML 5 permet de cr\xE9er des applications web qui vont chercher les donn\xE9es et s'affichent de mani\xE8re adapt\xE9e sur toute la gamme de terminaux.",img:"/files/html5.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tableau de bord des SMS",slug:"bigdata",text:"Comment voir si ces milliers d'envoi SMS sont compatibles avec une scolarit\xE9 d'adolescent ?",img:"/files/bigdata2.png"}),external_react_default.a.createElement(containers_Story,{className:classes,slug:"TableauSoft",title:"L'outil de visualisation Tableau Software",text:"Le logiciel Tableau Software permet d'explorer en deux coups de souris les milles et unes repr\xE9sentations visuelles d'un jeu de donn\xE9es.",img:"/files/Baignoire1.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tableau de bord financier de l'entreprise",slug:"indicateurs-financiers",text:"Les donn\xE9es l\xE9gales permettent d'analyser la performance des entreprises: outil \xE9conomique, marge brute, cr\xE9ation/utilisation de la valeur ajout\xE9e, rentabilit\xE9 des fonds propres, effet de levier des emprunts, ...",img:"/files/TabFinancier.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Les donn\xE9es ouvertes de la RATP",slug:"lopen-data-ratp",text:"Encore un exemple de l'importance vitale de la mise en contexte et du point de vue du lecteur de la repr\xE9sentation.",img:"/files/ratp.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Portefeuille de projets",slug:"excel",text:"Une modeste feuille Excel peut remplir bien des services de visualisation \xE0 condition de pas enterrer les donn\xE9es dedans.",img:"/files/excel.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Re-conception d'un indicateur",slug:"economie-denergie",text:"Face \xE0 un tableau de bord pr\xE9sentant de multiples indicateurs, il n'est pas \xE9vident de v\xE9rifier que toutes les aiguilles noires se trouvent dans les zones vertes.",img:"/files/Ecolabel06.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Le tableau de bord sur un A4",slug:"tableau",text:"Le tableau de bord efficace propose les indicateurs vitaux en un seul regard. Tourner les pages, bulles ou pop-up ne sont permis que pour r\xE9pondre \xE0 des questions de deuxi\xE8me niveau.",img:"/files/avions_preview.jpg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Signal ou bruit ?",slug:"signal-ou-bruit",text:"Qu'est ce qui est le plus grave pour une organisation ? Sur-r\xE9agir \xE0 une variation brusque mais statistiquement non significative d'un indicateur ou rater une stagnation devenue trop longue pour ne pas cacher un signal fort. C'est parfois quand rien ne bouge qu'il faut r\xE9agir vite !",img:"/files/PBCRange.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Radar, araign\xE9e, polaire ou Kiviat",slug:"toile-araign\xE9e",text:"C'est le diagramme vedette de la pr\xE9sentation et de la comparaison de performances. Il est tr\xE8s joli et parait savant, mais est-il efficace ? Analyse, critiques et alternatives.",img:"/files/spider0Small.jpg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Le budget t\xE9l\xE9communication",slug:"telephone",text:"Il s'agit de comprendre o\xF9 passent les d\xE9penses avant de pouvoir en prendre le contr\xF4le et de d\xE9cider.",img:"/files/appels.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Rapport visuel automatique de Google Forms",slug:"googleforms",text:"Si vous avez d\xE9j\xE0 profit\xE9 de la puissance des formulaires Google Forms: simple, intuitif, efficace. Vous avez certainement \xE9t\xE9 d\xE9\xE7u du rapport standard. Voici un outil automatique qui esp\xE8re contribuer \xE0 de meilleures visualisations.",img:"/files/googleforms.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tout \xE0 la souris",slug:"barchart",text:"Le diagramme en barres peut \xEAtre \xE0 la fois la sortie et l'entr\xE9e de donn\xE9es \xE0 la souris.",img:"https://gist.github.com/AlainRo/9264cd08e341f2c92f020c39642c34d1/raw/5b4cd7390e0595c917eb7c383d745721fc635dec/preview.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Combien de chiffres faut il afficher ?",slug:"chiffres",text:"Quand le nombre est \xE0 destination de l'\xEAtre humain, il convient de limiter la pr\xE9cision au profit de la digestibilit\xE9.",img:"/files/chiffres.jpeg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Visualiser la tr\xE9sorerie ?",slug:"tresorerie",text:"Une web application qui d\xE9montre la possibilit\xE9 de simuler, \xE0 la souris, l'effet de d\xE9calages de dates de certaines factures sur la tr\xE9sorerie pr\xE9visionnelle. ",img:"/files/loopingsample.gif"}))));}var grid=Object(styles_["withStyles"])(GridofStories_styles)(FullWidthGrid);/* harmony default export */ var GridofStories = (grid);
-// EXTERNAL MODULE: external "htmr"
-var external_htmr_ = __webpack_require__(14);
-
+var GridofStories_styles=function styles(theme){return{root:{flexGrow:1}};};function FullWidthGrid(props){var classes=props.classes;return external_react_default.a.createElement("div",null,external_react_default.a.createElement("div",{className:classes.root},external_react_default.a.createElement(core_["Grid"],{container:true,spacing:24}," ",external_react_default.a.createElement(containers_Story,{className:classes,title:"Pr\xE9senter \xE0 chacun ce qui est important pour lui",slug:"carte",text:"Visualiser sur une carte beaucoup d'information tout en restant clair. C'est possible \xE0 condition de prendre en compte ce qui est important pour chaque cat\xE9gorie d'utilisateur.",img:"/files/chantiers.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,slug:"bigdata2",title:"Poser simplement des questions complexes",text:"Interaction et animation pour des tableaux de bord qui permettent de formuler facilement des questions tr\xE8s sophistiqu\xE9es: montrer moi l'\xE9volution des envois dans ce cr\xE9neau de dates, cette plage horaire, un mardi ou mercredi ?",img:"/files/SMS.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Les assiettes volantes ou l'art de maintenir tout en \xE9quilibre",slug:"assiettes",text:"Faut il seulement guetter les assiettes qui vont tomber et subir la situation ? Ou bien comprendre ce qui se passe ?",img:"/files/BluePlasticPlates-m.jpg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Visualiser la s\xE9curit\xE9",slug:"indicateur-s\xE9curit\xE9",text:"Un scanner automatique de vuln\xE9rabilit\xE9 permet de tester la pr\xE9sence de failles dans les syst\xE8mes, applications et configurations des \xE9quipements d'un r\xE9seau. Ces failles \xE9tant connues de tous, elles sont autant de portes mal ferm\xE9es dangereuses pour la s\xE9curit\xE9. Mais il est vital d'optimiser ses efforts et co\xFBts de correction en prot\xE9geant le plus important, le plus vuln\xE9rable et le plus expos\xE9 d'abord.",img:"/files/Indic2.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Indicateurs visuels d'avancement de projets",slug:"indicateurs-projets",text:"Communiquer vite et bien la progression de projets.",img:"/files/syst.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Pr\xE9sentation structur\xE9e de Tables",slug:"table",text:"Une extension Excel permet de manipuler et de pr\xE9senter les tables de donn\xE9es. Les champs r\xE9p\xE9t\xE9s sont visuellement mis en facteur.",img:"/files/2014-04-14-19_33_41.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Les feux tricolores restent sur la route !",slug:"stop-aux-feux-tricolores",text:"Les Tableaux de Bord sont peupl\xE9s d'innombrables indicateurs vert/orange/rouge. Est ce vraiment une bonne id\xE9e ?",img:"/files/feutrs.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tableau de courbes",slug:"tableaudecourbes",text:"Plut\xF4t que des tableaux de chiffres avec 2 d\xE9cimales apr\xE8s la virgule, le tableau de courbes raconte une histoire et fait se poser les bonnes questions.",img:"/files/Tableau%20Courbes.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"HTML 5: l'ubiquit\xE9",slug:"html5",text:"HTML 5 permet de cr\xE9er des applications web qui vont chercher les donn\xE9es et s'affichent de mani\xE8re adapt\xE9e sur toute la gamme de terminaux.",img:"/files/html5.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tableau de bord des SMS",slug:"bigdata",text:"Comment voir si ces milliers d'envoi SMS sont compatibles avec une scolarit\xE9 d'adolescent ?",img:"/files/bigdata2.png"}),external_react_default.a.createElement(containers_Story,{className:classes,slug:"TableauSoft",title:"L'outil de visualisation Tableau Software",text:"Le logiciel Tableau Software permet d'explorer en deux coups de souris les milles et unes repr\xE9sentations visuelles d'un jeu de donn\xE9es.",img:"/files/Baignoire1.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tableau de bord financier de l'entreprise",slug:"indicateurs-financiers",text:"Les donn\xE9es l\xE9gales permettent d'analyser la performance des entreprises: outil \xE9conomique, marge brute, cr\xE9ation/utilisation de la valeur ajout\xE9e, rentabilit\xE9 des fonds propres, effet de levier des emprunts, ...",img:"/files/TabFinancier.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Les donn\xE9es ouvertes de la RATP",slug:"lopen-data-ratp",text:"Encore un exemple de l'importance vitale de la mise en contexte et du point de vue du lecteur de la repr\xE9sentation.",img:"/files/ratp.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Portefeuille de projets",slug:"excel",text:"Une modeste feuille Excel peut remplir bien des services de visualisation \xE0 condition de pas enterrer les donn\xE9es dedans.",img:"/files/excel.gif"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Re-conception d'un indicateur",slug:"economie-denergie",text:"Face \xE0 un tableau de bord pr\xE9sentant de multiples indicateurs, il n'est pas \xE9vident de v\xE9rifier que toutes les aiguilles noires se trouvent dans les zones vertes.",img:"/files/Ecolabel06.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Le tableau de bord sur un A4",slug:"tableau",text:"Le tableau de bord efficace propose les indicateurs vitaux en un seul regard. Tourner les pages, bulles ou pop-up ne sont permis que pour r\xE9pondre \xE0 des questions de deuxi\xE8me niveau.",img:"/files/avions_preview.jpg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Signal ou bruit ?",slug:"signal-ou-bruit",text:"Qu'est ce qui est le plus grave pour une organisation ? Sur-r\xE9agir \xE0 une variation brusque mais statistiquement non significative d'un indicateur ou rater une stagnation devenue trop longue pour ne pas cacher un signal fort. C'est parfois quand rien ne bouge qu'il faut r\xE9agir vite !",img:"/files/PBCRange.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Radar, araign\xE9e, polaire ou Kiviat",slug:"toile-araign\xE9e",text:"C'est le diagramme vedette de la pr\xE9sentation et de la comparaison de performances. Il est tr\xE8s joli et parait savant, mais est-il efficace ? Analyse, critiques et alternatives.",img:"/files/spider0Small.jpg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Le budget t\xE9l\xE9communication",slug:"telephone",text:"Il s'agit de comprendre o\xF9 passent les d\xE9penses avant de pouvoir en prendre le contr\xF4le et de d\xE9cider.",img:"/files/appels.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Rapport visuel automatique de Google Forms",slug:"googleforms",text:"Si vous avez d\xE9j\xE0 profit\xE9 de la puissance des formulaires Google Forms: simple, intuitif, efficace. Vous avez certainement \xE9t\xE9 d\xE9\xE7u du rapport standard. Voici un outil automatique qui esp\xE8re contribuer \xE0 de meilleures visualisations.",img:"/files/googleforms.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Tout \xE0 la souris",slug:"barchart",text:"Le diagramme en barres peut \xEAtre \xE0 la fois la sortie et l'entr\xE9e de donn\xE9es \xE0 la souris.",img:"/files/preview.png"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Combien de chiffres faut il afficher ?",slug:"chiffres",text:"Quand le nombre est \xE0 destination de l'\xEAtre humain, il convient de limiter la pr\xE9cision au profit de la digestibilit\xE9.",img:"/files/chiffres.jpeg"}),external_react_default.a.createElement(containers_Story,{className:classes,title:"Visualiser la tr\xE9sorerie ?",slug:"tresorerie",text:"Une web application qui d\xE9montre la possibilit\xE9 de simuler, \xE0 la souris, l'effet de d\xE9calages de dates de certaines factures sur la tr\xE9sorerie pr\xE9visionnelle. ",img:"/files/loopingsample.gif"}))));}var grid=Object(styles_["withStyles"])(GridofStories_styles)(FullWidthGrid);/* harmony default export */ var GridofStories = (grid);
 // EXTERNAL MODULE: external "classnames"
-var external_classnames_ = __webpack_require__(72);
+var external_classnames_ = __webpack_require__(73);
 
 // EXTERNAL MODULE: external "@material-ui/core/AppBar"
-var AppBar_ = __webpack_require__(73);
+var AppBar_ = __webpack_require__(74);
 
 // EXTERNAL MODULE: external "@material-ui/core/CardHeader"
 var CardHeader_ = __webpack_require__(25);
 var CardHeader_default = /*#__PURE__*/__webpack_require__.n(CardHeader_);
 
 // EXTERNAL MODULE: external "@material-ui/core/CssBaseline"
-var CssBaseline_ = __webpack_require__(74);
+var CssBaseline_ = __webpack_require__(75);
 
 // EXTERNAL MODULE: external "@material-ui/core/Grid"
 var Grid_ = __webpack_require__(23);
 var Grid_default = /*#__PURE__*/__webpack_require__.n(Grid_);
 
 // EXTERNAL MODULE: external "@material-ui/core/Divider"
-var Divider_ = __webpack_require__(75);
+var Divider_ = __webpack_require__(76);
 
 // EXTERNAL MODULE: external "@material-ui/icons/StarBorder"
-var StarBorder_ = __webpack_require__(76);
+var StarBorder_ = __webpack_require__(77);
 
 // EXTERNAL MODULE: external "@material-ui/core/Toolbar"
-var Toolbar_ = __webpack_require__(77);
+var Toolbar_ = __webpack_require__(78);
 
 // EXTERNAL MODULE: external "@material-ui/icons/ArrowForward"
 var ArrowForward_ = __webpack_require__(26);
@@ -3067,11 +3064,16 @@ var ArrowForward_default = /*#__PURE__*/__webpack_require__.n(ArrowForward_);
 // CONCATENATED MODULE: /Users/alain/Documents/Git/perceptibleNew/src/containers/Offre.js
 function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}//import { Link } from 'react-router-dom'
 //import { Link } from 'react-static'
-var Offre_styles=function styles(theme){return{layout:_defineProperty({width:'auto',marginLeft:theme.spacing.unit*3,marginRight:theme.spacing.unit*3},theme.breakpoints.up(900+theme.spacing.unit*3*2),{width:900,marginLeft:'auto',marginRight:'auto'}),card:{minWidth:300,maxWidth:700,marginRight:20,marginBottom:10,marginTop:20},title:{background:'grey',align:'center'},heroContent:{maxWidth:600,margin:'0 auto',padding:"".concat(theme.spacing.unit*8,"px 0 ").concat(theme.spacing.unit*6,"px")},cardHeader:{backgroundColor:theme.palette.grey[200]}};};function Offre(props){var classes=props.classes;return external_react_default.a.createElement(external_react_default.a.Fragment,null,external_react_default.a.createElement("main",{className:classes.layout},external_react_default.a.createElement("div",{className:classes.heroContent},external_react_default.a.createElement(Typography_default.a,{component:"h1",variant:"display3",align:"center",color:"textPrimary",gutterBottom:true},"Les donn\xE9es aident \xE0 d\xE9cider"),external_react_default.a.createElement(Typography_default.a,{variant:"headline",align:"center",color:"textSecondary",component:"p"},"Analyser les donn\xE9es pour construire les indicateurs cl\xE9s qui regardent vers l'avant et les communiquer visuellement.")),external_react_default.a.createElement(Grid_default.a,_defineProperty({container:true,spacing:40},"container",true),external_react_default.a.createElement(Grid_default.a,{item:true,xs:12,sm:12,md:4},external_react_default.a.createElement(Card_default.a,{className:classes.card,elevation:8},external_react_default.a.createElement(CardHeader_default.a,{className:classes.cardHeader,title:"DATAVIZ",titleTypographyProps:{align:'center'},subheader:"perceptible.fr vous aide \xE0 Explorer, Analyser, Visualiser, Comprendre",subheaderTypographyProps:{fontWeight:'bold'}}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},"La visualisation permet de rendre accessible les donn\xE9es sous forme de diagrammes, cartes, courbes, ... Elle est le support privil\xE9gi\xE9 du Story Telling, du Reporting et duTableau de bord.")),external_react_default.a.createElement(CardActions_default.a,null,external_react_default.a.createElement(Button_default.a,{size:"small",variant:"outlined",component:router_["Link"],to:"/blog/data"},"En savoir plus",external_react_default.a.createElement(ArrowForward_default.a,null))))),external_react_default.a.createElement(Grid_default.a,{item:true,xs:12,sm:12,md:4},external_react_default.a.createElement(Card_default.a,{className:classes.card,elevation:8},external_react_default.a.createElement(CardHeader_default.a,{className:classes.cardHeader,title:"DASHBOARD ",titleTypographyProps:{align:'center'},subheader:"perceptible.fr vous aide \xE0 Mesurer, Expliquer, Piloter, Am\xE9liorer",subheaderTypographyProps:{fontWeight:'bold'}}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},"Plus qu'un reporting statique, le tableau de bord est focalis\xE9 sur les indicateurs cl\xE9s, regarde vers l'avant, explique et pr\xE9dit. Il rend visible les chiffres et leur donne du sens.")),external_react_default.a.createElement(CardActions_default.a,null,external_react_default.a.createElement(Button_default.a,{size:"small",variant:"outlined",component:router_["Link"],to:"/about"},"En savoir plus",external_react_default.a.createElement(ArrowForward_default.a,null))))),external_react_default.a.createElement(Grid_default.a,{item:true,xs:12,sm:12,md:4},external_react_default.a.createElement(Card_default.a,{className:classes.card,elevation:8},external_react_default.a.createElement(CardHeader_default.a,{className:classes.cardHeader,title:"APPLICATION",titleTypographyProps:{align:'center'},subheader:"perceptible.fr vous aide \xE0 Partager, Interroger, Communiquer, Suivre",subheaderTypographyProps:{fontWeight:'bold'}}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},"Tableur Excel, Application de Business Intelligence, Application Web ou Mobile. Il faut un moyen simple et bon march\xE9 d'acc\xE9der aux informations.")),external_react_default.a.createElement(CardActions_default.a,null,external_react_default.a.createElement(Button_default.a,{size:"small",variant:"outlined",component:router_["Link"],to:"/blog/spa"},"En savoir plus",external_react_default.a.createElement(ArrowForward_default.a,null))))))));}/* harmony default export */ var containers_Offre = (Object(styles_["withStyles"])(Offre_styles)(Offre));
+var Offre_styles=function styles(theme){return{layout:_defineProperty({width:'auto',marginLeft:theme.spacing.unit*3,marginRight:theme.spacing.unit*3},theme.breakpoints.up(900+theme.spacing.unit*3*2),{width:900,marginLeft:'auto',marginRight:'auto'}),card:{minWidth:300,maxWidth:700,marginRight:20,marginBottom:10,marginTop:20},title:{background:'grey',align:'center'},heroContent:{maxWidth:600,margin:'0 auto',padding:"".concat(theme.spacing.unit*8,"px 0 ").concat(theme.spacing.unit*6,"px")},cardHeader:{backgroundColor:theme.palette.grey[200]}};};function Offre(props){var classes=props.classes;return external_react_default.a.createElement("div",null,external_react_default.a.createElement("div",null," ",external_react_default.a.createElement(Typography_default.a,{component:"h1",variant:"h2",align:"center",color:"textPrimary",gutterBottom:true},"Les donn\xE9es aident \xE0 d\xE9cider"),external_react_default.a.createElement(Typography_default.a,{variant:"h5",align:"center",color:"textSecondary",component:"p"},"Analyser les donn\xE9es pour construire les indicateurs cl\xE9s qui regardent vers l'avant et les communiquer visuellement.")),external_react_default.a.createElement(Grid_default.a,_defineProperty({container:true,spacing:40},"container",true),external_react_default.a.createElement(Grid_default.a,{item:true,xs:12,sm:12,md:4},external_react_default.a.createElement(Card_default.a,{className:classes.card,elevation:8},external_react_default.a.createElement(CardHeader_default.a,{className:classes.cardHeader,title:"DATAVIZ",titleTypographyProps:{align:'center'},subheader:"perceptible.fr vous aide \xE0 Explorer, Analyser, Visualiser, Comprendre",subheaderTypographyProps:{fontWeight:'bold'}}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},"La visualisation permet de rendre accessible les donn\xE9es sous forme de diagrammes, cartes, courbes, ... Elle est le support privil\xE9gi\xE9 du Story Telling, du Reporting et duTableau de bord.")),external_react_default.a.createElement(CardActions_default.a,null,external_react_default.a.createElement(Button_default.a,{size:"small",variant:"outlined",component:router_["Link"],to:"/blog/data"},"En savoir plus",external_react_default.a.createElement(ArrowForward_default.a,null))))),external_react_default.a.createElement(Grid_default.a,{item:true,xs:12,sm:12,md:4},external_react_default.a.createElement(Card_default.a,{className:classes.card,elevation:8},external_react_default.a.createElement(CardHeader_default.a,{className:classes.cardHeader,title:"DASHBOARD ",titleTypographyProps:{align:'center'},subheader:"perceptible.fr vous aide \xE0 Mesurer, Expliquer, Piloter, Am\xE9liorer",subheaderTypographyProps:{fontWeight:'bold'}}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},"Plus qu'un reporting statique, le tableau de bord est focalis\xE9 sur les indicateurs cl\xE9s, regarde vers l'avant, explique et pr\xE9dit. Il rend visible les chiffres et leur donne du sens.")),external_react_default.a.createElement(CardActions_default.a,null,external_react_default.a.createElement(Button_default.a,{size:"small",variant:"outlined",component:router_["Link"],to:"/about"},"En savoir plus",external_react_default.a.createElement(ArrowForward_default.a,null))))),external_react_default.a.createElement(Grid_default.a,{item:true,xs:12,sm:12,md:4},external_react_default.a.createElement(Card_default.a,{className:classes.card,elevation:8},external_react_default.a.createElement(CardHeader_default.a,{className:classes.cardHeader,title:"APPLICATION",titleTypographyProps:{align:'center'},subheader:"perceptible.fr vous aide \xE0 Partager, Interroger, Communiquer, Suivre",subheaderTypographyProps:{fontWeight:'bold'}}),external_react_default.a.createElement(CardContent_default.a,null,external_react_default.a.createElement(Typography_default.a,{component:"p"},"Tableur Excel, Application de Business Intelligence, Application Web ou Mobile. Il faut un moyen simple et bon march\xE9 d'acc\xE9der aux informations.")),external_react_default.a.createElement(CardActions_default.a,null,external_react_default.a.createElement(Button_default.a,{size:"small",variant:"outlined",component:router_["Link"],to:"/blog/spa"},"En savoir plus",external_react_default.a.createElement(ArrowForward_default.a,null)))))));}//export default Offre;
+/* harmony default export */ var containers_Offre = (Object(styles_["withStyles"])(Offre_styles)(Offre));
+// EXTERNAL MODULE: external "history/createBrowserHistory"
+var createBrowserHistory_ = __webpack_require__(51);
+var createBrowserHistory_default = /*#__PURE__*/__webpack_require__.n(createBrowserHistory_);
+
 // CONCATENATED MODULE: /Users/alain/Documents/Git/perceptibleNew/src/pages/index.js
-//
-/* harmony default export */ var pages = __webpack_exports__["default"] = (Object(lib["withRouteData"])(function(_ref){var offre=_ref.offre;return external_react_default.a.createElement("div",null,external_react_default.a.createElement(containers_Offre,null),external_react_default.a.createElement(GridofStories,null));}));// <section>{offre? convert(offre.contents) : ''}</section>
-// <section> DEF</section>
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pages_Home; });
+function _typeof(obj){if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}function _possibleConstructorReturn(self,call){if(call&&(_typeof(call)==="object"||typeof call==="function")){return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self){if(self===void 0){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _getPrototypeOf(o){_getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function _getPrototypeOf(o){return o.__proto__||Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function");}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,writable:true,configurable:true}});if(superClass)_setPrototypeOf(subClass,superClass);}function _setPrototypeOf(o,p){_setPrototypeOf=Object.setPrototypeOf||function _setPrototypeOf(o,p){o.__proto__=p;return o;};return _setPrototypeOf(o,p);}// TRES ETRANGE le simple usage d'history résoud le problème
+var pages_history=createBrowserHistory_default()();var pages_Home=/*#__PURE__*/function(_React$Component){_inherits(Home,_React$Component);function Home(){_classCallCheck(this,Home);return _possibleConstructorReturn(this,_getPrototypeOf(Home).apply(this,arguments));}_createClass(Home,[{key:"render",value:function render(){return external_react_default.a.createElement("div",null,external_react_default.a.createElement(lib["Prefetch"],{path:"/"}),external_react_default.a.createElement(containers_Offre,null),external_react_default.a.createElement(GridofStories,null));}}]);return Home;}(external_react_default.a.Component);
 
 /***/ }),
 /* 44 */
@@ -3088,7 +3090,7 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var lib = __webpack_require__(3);
 
 // EXTERNAL MODULE: external "htmr"
-var external_htmr_ = __webpack_require__(14);
+var external_htmr_ = __webpack_require__(17);
 var external_htmr_default = /*#__PURE__*/__webpack_require__.n(external_htmr_);
 
 // EXTERNAL MODULE: external "@observablehq/notebook-runtime"
@@ -3161,14 +3163,20 @@ module.exports = require("@material-ui/core/CardMedia");
 
 /***/ }),
 /* 51 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-__webpack_require__(52);
-module.exports = __webpack_require__(61);
-
+module.exports = require("history/createBrowserHistory");
 
 /***/ }),
 /* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(53);
+module.exports = __webpack_require__(62);
+
+
+/***/ }),
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3176,7 +3184,7 @@ module.exports = __webpack_require__(61);
 
 var _templates = _interopRequireDefault(__webpack_require__(33));
 
-var _browser = __webpack_require__(16);
+var _browser = __webpack_require__(15);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -3194,7 +3202,7 @@ if (typeof document !== 'undefined' && module && module.hot) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3404,7 +3412,7 @@ var getConfig = function getConfig(isDynamic, universalConfig, options, props) {
 };
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -3433,10 +3441,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 54;
+webpackContext.id = 55;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3545,19 +3553,19 @@ ReportChunks.childContextTypes = {
 exports.default = ReportChunks;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 module.exports = require("hoist-non-react-statics");
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 module.exports = require("swimmer");
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3602,7 +3610,7 @@ function onMutation(cb) {
 
 if (typeof document !== 'undefined') {
   // Polyfill that shiz!
-  __webpack_require__(59); // Create an observer instance linked to the callback function
+  __webpack_require__(60); // Create an observer instance linked to the callback function
 
 
   var observer = new window.MutationObserver(function (mutations) {
@@ -3639,19 +3647,19 @@ if (typeof document !== 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 module.exports = require("mutation-observer");
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = require("intersection-observer");
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3698,7 +3706,7 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-var App = __webpack_require__(78).default;
+var App = __webpack_require__(79).default;
 
 var _default = function _default(staticInfo) {
   return function (props) {
@@ -3741,13 +3749,13 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-helmet");
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3761,11 +3769,11 @@ Object.defineProperty(exports, "__esModule", {
 exports.withRouteData = withRouteData;
 exports.default = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(17));
+var _regenerator = _interopRequireDefault(__webpack_require__(16));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
-var _ = __webpack_require__(16);
+var _ = __webpack_require__(15);
 
 var _utils = __webpack_require__(13);
 
@@ -4105,7 +4113,7 @@ function withRouteData(Comp) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4119,7 +4127,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.withSiteData = withSiteData;
 exports.default = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(17));
+var _regenerator = _interopRequireDefault(__webpack_require__(16));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -4467,7 +4475,7 @@ function withSiteData(Comp) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4480,13 +4488,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(17));
+var _regenerator = _interopRequireDefault(__webpack_require__(16));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
 var _utils = __webpack_require__(13);
 
-var _ = __webpack_require__(16);
+var _ = __webpack_require__(15);
 
 var _Visibility = _interopRequireDefault(__webpack_require__(35));
 
@@ -4817,7 +4825,7 @@ _defineProperty(Prefetch, "defaultProps", {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4830,11 +4838,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(17));
+var _regenerator = _interopRequireDefault(__webpack_require__(16));
 
 var _react = _interopRequireWildcard(__webpack_require__(0));
 
-var _ = __webpack_require__(16);
+var _ = __webpack_require__(15);
 
 var _StaticInfo = __webpack_require__(20);
 
@@ -5187,7 +5195,7 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5204,13 +5212,13 @@ var _react = _interopRequireDefault(__webpack_require__(0));
 
 var _router = __webpack_require__(6);
 
-var _ = __webpack_require__(16);
+var _ = __webpack_require__(15);
 
 var _utils = __webpack_require__(13);
 
-var _ErrorBoundary = _interopRequireDefault(__webpack_require__(68));
+var _ErrorBoundary = _interopRequireDefault(__webpack_require__(69));
 
-var _HashScroller = _interopRequireDefault(__webpack_require__(69));
+var _HashScroller = _interopRequireDefault(__webpack_require__(70));
 
 var _StaticInfo = __webpack_require__(20);
 
@@ -5582,7 +5590,7 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5870,7 +5878,7 @@ exports.default = ErrorBoundary;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6180,10 +6188,10 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(71)(false);
+exports = module.exports = __webpack_require__(72)(false);
 // imports
 
 
@@ -6194,7 +6202,7 @@ exports.push([module.i, "body {\n  font-family: 'HelveticaNeue-Light', 'Helvetic
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports) {
 
 /*
@@ -6276,43 +6284,43 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/AppBar");
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/CssBaseline");
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/Divider");
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/icons/StarBorder");
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/Toolbar");
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6358,14 +6366,14 @@ function _extends(){_extends=Object.assign||function(target){for(var i=1;i<argum
 // CONCATENATED MODULE: /Users/alain/Documents/Git/perceptibleNew/src/containers/Footer.js
 function Footer_objectWithoutProperties(source,excluded){if(source==null)return{};var target=Footer_objectWithoutPropertiesLoose(source,excluded);var key,i;if(Object.getOwnPropertySymbols){var sourceSymbolKeys=Object.getOwnPropertySymbols(source);for(i=0;i<sourceSymbolKeys.length;i++){key=sourceSymbolKeys[i];if(excluded.indexOf(key)>=0)continue;if(!Object.prototype.propertyIsEnumerable.call(source,key))continue;target[key]=source[key];}}return target;}function Footer_objectWithoutPropertiesLoose(source,excluded){if(source==null)return{};var target={};var sourceKeys=Object.keys(source);var key,i;for(i=0;i<sourceKeys.length;i++){key=sourceKeys[i];if(excluded.indexOf(key)>=0)continue;target[key]=source[key];}return target;}var Footer_styles=function styles(theme){return{footer:{backgroundColor:theme.palette.background.paper,marginTop:theme.spacing.unit*8,padding:"".concat(theme.spacing.unit*6,"px 0")}};};var Footer_Footer=function Footer(_ref){var classes=_ref.classes,props=Footer_objectWithoutProperties(_ref,["classes"]);return external_react_default.a.createElement("div",null,external_react_default.a.createElement("footer",{className:classes.footer},external_react_default.a.createElement(core_["Divider"],null),external_react_default.a.createElement(Typography_default.a,{variant:"h6",align:"center",gutterBottom:true}),external_react_default.a.createElement(Typography_default.a,{variant:"body1",align:"center",color:"textSecondary",component:"p"},external_react_default.a.createElement("b",null,"perceptible.fr - 2011-2018")," | ",external_react_default.a.createElement("a",{href:"mailto:alain.roan@perceptible.fr"},"alain.roan@perceptible.fr")," |  ",external_react_default.a.createElement("a",{href:"tel:0619655383"},"0619655383"))));};var FooterStyled=Object(styles_["withStyles"])(Footer_styles)(Footer_Footer);/* harmony default export */ var containers_Footer = (FooterStyled);
 // EXTERNAL MODULE: /Users/alain/Documents/Git/perceptibleNew/src/app.css
-var app = __webpack_require__(70);
+var app = __webpack_require__(71);
 
 // CONCATENATED MODULE: /Users/alain/Documents/Git/perceptibleNew/src/App.js
 function _typeof(obj){if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}function _possibleConstructorReturn(self,call){if(call&&(_typeof(call)==="object"||typeof call==="function")){return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self){if(self===void 0){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _getPrototypeOf(o){_getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function _getPrototypeOf(o){return o.__proto__||Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function");}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,writable:true,configurable:true}});if(superClass)_setPrototypeOf(subClass,superClass);}function _setPrototypeOf(o,p){_setPrototypeOf=Object.setPrototypeOf||function _setPrototypeOf(o,p){o.__proto__=p;return o;};return _setPrototypeOf(o,p);}//
 //import Routes from 'react-static'
 // Custom styles
 var App_styles={'@global':{img:{maxWidth:'100%'},a:{color:'#A8020B',fontWeight:'bold',textDecoration:'none'},h1:{color:'#A8020B'},h2:{color:'#A8020B'},h3:{color:'#A8020B'},h4:{color:'#A8020B'},body:{fontFamily:'Verdana',backgroundColor:'white'},post:{padding:'10%'}},content:{paddingTop:'40px',paddingLeft:'5%',paddingRight:'5%'},post:{backgroung:'red'},body:{fontFamily:'HelveticaNeue-Light',fontWeight:'300',fontSize:'16px'},appBar:{flexWrap:'wrap'}};var App_App=/*#__PURE__*/function(_PureComponent){_inherits(App,_PureComponent);function App(){_classCallCheck(this,App);return _possibleConstructorReturn(this,_getPrototypeOf(App).apply(this,arguments));}_createClass(App,[{key:"componentDidMount",// Remove the server-side injected CSS.
-value:function componentDidMount(){var jssStyles=document.getElementById('jss-server-side');if(jssStyles&&jssStyles.parentNode){jssStyles.parentNode.removeChild(jssStyles);}}},{key:"render",value:function render(){var classes=this.props.classes;return external_react_default.a.createElement(lib["Root"],null,external_react_default.a.createElement("div",null,external_react_default.a.createElement(containers_Header,{className:classes.content}),external_react_default.a.createElement(core_["CssBaseline"],null),external_react_default.a.createElement("center",null,"Ce site est en cours de transformation, merci de nous excuser des d\xE9sagr\xE9ements."),external_react_default.a.createElement(core_["AppBar"],{position:"static",color:"default"},external_react_default.a.createElement("nav",null,external_react_default.a.createElement(Tabs_default.a,{className:classes.tabs,value:false},external_react_default.a.createElement(Tab_default.a,{component:router_["Link"],to:"/",label:"accueil"}),external_react_default.a.createElement(Tab_default.a,{component:router_["Link"],to:"/qui",label:"qui"})))),external_react_default.a.createElement("div",{className:classes.content},external_react_default.a.createElement(lib["Routes"],null)),external_react_default.a.createElement(containers_Footer,null)));}}]);return App;}(external_react_["PureComponent"]);var AppWithStyles=Object(core_["withStyles"])(App_styles)(App_App);/* harmony default export */ var src_App = (AppWithStyles);
+value:function componentDidMount(){var jssStyles=document.getElementById('jss-server-side');if(jssStyles&&jssStyles.parentNode){jssStyles.parentNode.removeChild(jssStyles);}}},{key:"render",value:function render(){var classes=this.props.classes;return external_react_default.a.createElement(lib["Root"],null,external_react_default.a.createElement("main",null,external_react_default.a.createElement(containers_Header,{className:classes.content}),external_react_default.a.createElement("center",null,"Ce site est en cours de transformation, merci de nous excuser des d\xE9sagr\xE9ements."),external_react_default.a.createElement(core_["AppBar"],{position:"static",color:"default"},external_react_default.a.createElement("nav",null,external_react_default.a.createElement(Tabs_default.a,{className:classes.tabs,value:false},external_react_default.a.createElement(Tab_default.a,{component:router_["Link"],to:"/",label:"accueil"}),external_react_default.a.createElement(Tab_default.a,{component:router_["Link"],to:"/qui",label:"qui"})))),external_react_default.a.createElement("div",{className:classes.content},external_react_default.a.createElement(lib["Routes"],null)),external_react_default.a.createElement(containers_Footer,null)));}}]);return App;}(external_react_["PureComponent"]);var AppWithStyles=Object(core_["withStyles"])(App_styles)(App_App);/* harmony default export */ var src_App = (AppWithStyles);
 // EXTERNAL MODULE: external "@material-ui/core/colors"
 var colors_ = __webpack_require__(32);
 
@@ -6384,4 +6392,4 @@ if(false){}}
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.62778e04.js.map
+//# sourceMappingURL=static.e226632e.js.map
