@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{116:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a);n.default=function(){return l.a.createElement("center",null,l.a.createElement("div",null,l.a.createElement("h1",null,"404 - Page non disponible"),l.a.createElement("img",{src:"/files/3D.jpg"})))}}}]);
-//# sourceMappingURL=src-pages-404.50876f4f.js.map

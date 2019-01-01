@@ -1,7 +1,5 @@
 
-
-import universal, { setHasBabelPlugin } from 'react-universal-component'
-  
+import universal, { setHasBabelPlugin } from '/Users/alain/Documents/Git/perceptibleNew/node_modules/react-universal-component/dist/index.js'
 
 
 setHasBabelPlugin()
@@ -21,8 +19,6 @@ const t_3 = universal(import('../src/containers/Post'), universalOptions)
 const t_4 = universal(import('../src/pages/index.js'), universalOptions)
 const t_5 = universal(import('../src/pages/qui.js'), universalOptions)
 
-
-export const template404ID = 0
 
 // Template Map
 export default [
