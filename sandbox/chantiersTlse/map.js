@@ -19,8 +19,8 @@ L.mapbox.map('map', 'alainr.k0b8me7e');
 var map = L.map('map').setView([43.600, 1.451], 13); //Toulouse area
 mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>'; //OpenStreetMap copyright
 L.tileLayer(
-	'http://{s}.tiles.mapbox.com/v3/alainr.k0b8me7e/{z}/{x}/{y}.png',{
-//	'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+//	'http://{s}.tiles.mapbox.com/v3/alainr.k0b8me7e/{z}/{x}/{y}.png',{
+	'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
 //	'https://a.tiles.mapbox.com/v4/alainr.k0b8me7e?access_token=pk.eyJ1IjoiYWxhaW5yIiwiYSI6ImVUZnpqdXcifQ.5Dg9vmLhSJoM_E0IViGdyA#4/43.58/1.35', {
 //   'https://a.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYWxhaW5yIiwiYSI6ImVUZnpqdXcifQ.5Dg9vmLhSJoM_E0IViGdyA', {
 //	'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', { //Custo of the map
