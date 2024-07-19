@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Statistiques | Les chantiers Toulousains</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_import/components/loadchart.03e270b4.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.15/_esm.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/_esm.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/_esm.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/_esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/_esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/_esm.js">
+<link rel="icon" href="./_file/icon.fe49efe6.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+import {registerFile} from "./_observablehq/stdlib.js";
+
+registerFile("./data/travaux.json", {"name":"./data/travaux.json","mimeType":"application/json","path":"./_file/data/travaux.50a57c9d.json","lastModified":1718906176978});
+
+define({id: "7917b0f1", outputs: ["loadchart"], body: async () => {
+const {loadchart} = await import("./_import/components/loadchart.03e270b4.js");
+
+return {loadchart};
+}});
+
+define({id: "0f9331bb", inputs: ["FileAttachment"], outputs: ["raw","date","data","pasCommence"], body: async (FileAttachment) => {
+const raw= await FileAttachment("./data/travaux.json").json();
+const date = raw.shift().datedebut // récupère la date de l'extraction
+const data = raw
+const pasCommence = data.filter(d => new Date(d.datedebut) -new Date() > 0).length
+return {raw,date,data,pasCommence};
+}});
+
+define({id: "adccee23", inline: true, inputs: ["data","pasCommence","display"], body: async (data,pasCommence,display) => {
+display(await(
+(data.length-pasCommence).toLocaleString("fr-FR")
+))
+}});
+
+define({id: "1a76f298", inline: true, inputs: ["data","display"], body: async (data,display) => {
+display(await(
+data.length.toLocaleString("fr-FR")
+))
+}});
+
+define({id: "3e0602ba", inline: true, inputs: ["d3","date","display"], body: async (d3,date,display) => {
+display(await(
+d3.timeFormat("%d-%b-%Y %H:%M")(new Date(date))
+))
+}});
+
+define({id: "7068de2b", inline: true, inputs: ["d3","data","display"], body: async (d3,data,display) => {
+display(await(
+Array.from(d3.group(data, d => d.declarant)).length
+))
+}});
+
+define({id: "b24c53c1", inline: true, inputs: ["resize","Plot","data","display"], body: async (resize,Plot,data,display) => {
+display(await(
+resize((width) => 
+        Plot.plot({
+          title: "Par pôle",
+          width,
+          height: 100,
+          marks: [
+            Plot.barY(data, Plot.groupX({ y: "count" }, { x: "pole", fill: "pole", sort:{x:"-y"} })),
+            Plot.ruleY([0])
+          ]
+    })) 
+    
+))
+}});
+
+define({id: "df155f0b", inline: true, inputs: ["resize","Plot","data","display"], body: async (resize,Plot,data,display) => {
+display(await(
+resize((width) => 
+        Plot.plot({
+          title: "Par durée en j",
+          width,
+          height: 100,
+          marks: [
+            Plot.barY(data, Plot.binX({ y: "count" , filter: d=> d.length> 10}, { x: "duree"})),
+            Plot.ruleY([0])
+          ]
+    }))
+))
+}});
+
+define({id: "01c9f4dd", inline: true, inputs: ["d3","data","display"], body: async (d3,data,display) => {
+display(await(
+Array.from(d3.group(data, d => d.commune)).length
+))
+}});
+
+define({id: "b5a6dd44", inline: true, inputs: ["data","display"], body: async (data,display) => {
+display(await(
+data.filter(d => new Date(d.datefin) - new Date()
+    <0 ).length
+))
+}});
+
+define({id: "57a1d56b", inline: true, inputs: ["pasCommence","display"], body: async (pasCommence,display) => {
+display(await(
+pasCommence
+))
+}});
+
+define({id: "d9e5bc80", inline: true, inputs: ["loadchart","data","display"], body: async (loadchart,data,display) => {
+display(await(
+loadchart(data, {width: 800,height:500})
+))
+}});
+
+define({id: "cb9ad123", inline: true, inputs: ["loadchart","data","display"], body: async (loadchart,data,display) => {
+display(await(
+loadchart(data.filter(d => Math.abs((new Date(d.datefin)-new Date())/3600/24/1000
+      ) <10), {width: 800,height:500})
+))
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Les chantiers Toulousains</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./carte">Carte</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./stats">Statistiques</a></li>
+    <li class="observablehq-link"><a href="./table">Table</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div id="cell-7917b0f1" class="observablehq observablehq--block"></div>
+<div id="cell-0f9331bb" class="observablehq observablehq--block"></div>
+<h1 id="les-statistiques-des-chantiers-en-cours" tabindex="-1"><a class="observablehq-header-anchor" href="#les-statistiques-des-chantiers-en-cours">Les statistiques des chantiers en cours</a></h1>
+<div class="grid grid-cols-4">
+  <div class="card">
+    <h1>Chantiers actifs</h1>
+    <span class="big"><span id="cell-adccee23"><span class="observablehq-loading"></span></span></span>
+    <h3>Déclarés : <span id="cell-1a76f298"><span class="observablehq-loading"></span></span></h3>
+  </div>
+    <div class="card">
+    <h1>Au :</h1>
+      <span class="big"><span id="cell-3e0602ba"><span class="observablehq-loading"></span></span></span>
+  </div>
+  <div class="card">
+    <h2>Nombre de déclarants</h2>
+    <span class="big"><span id="cell-7068de2b"><span class="observablehq-loading"></span></span></span>
+  </div>
+  <div class="card">
+    <span id="cell-b24c53c1"><span class="observablehq-loading"></span></span>
+  </div>
+  <div class="card">
+    <span id="cell-df155f0b"><span class="observablehq-loading"></span></span>
+  </div>
+  <div class="card">
+     <h2>Nombre de communes concernées</h2>
+    <span class="big"><span id="cell-01c9f4dd"><span class="observablehq-loading"></span></span></span> 
+  </div>
+  <div class="card">
+     <h2>Nombre de projets en retard de terminaison</h2>
+    <span class="big"><font size="7"><span id="cell-b5a6dd44"><span class="observablehq-loading"></span></span></font></span> 
+  </div>
+  <div class="card">
+     <h2>Nombre de projets futurs pas encore commencés</h2>
+    <span class="big"><span id="cell-57a1d56b"><span class="observablehq-loading"></span></span></span> 
+  </div>
+</div>
+<div class="grid grid-cols-2">
+  <div class="card">
+     <h2>Histogramme des travaux</h2>
+      <span id="cell-d9e5bc80"><span class="observablehq-loading"></span></span>
+      Ce diagramme est la superposition de chaque chantier [datedebut, dafefin].
+  </div>
+  <div class="card">
+     <h2>Histogramme des travaux à 10 jours</h2>
+      <span id="cell-cb9ad123"><span class="observablehq-loading"></span></span>
+  </div>
+</div></main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./carte"><span>Carte</span></a><a rel="next" href="./table"><span>Table</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-07-09T10:53:56">Jul 9, 2024</a>.</div>
+</footer>
+</div>
